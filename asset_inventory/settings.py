@@ -38,6 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'server',
+    'import_export',
+    'django_admin_listfilter_dropdown',
 ]
 
 MIDDLEWARE = [
