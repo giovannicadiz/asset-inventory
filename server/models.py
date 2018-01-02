@@ -26,7 +26,31 @@ class Server(models.Model):
     hardware_agent = models.CharField(max_length=255)
     # owner
     business_unit = models.CharField(max_length=255)
-    country = models.CharField(max_length=255)
+
+    Argentina = 'ARGENTINA'
+    Bolivia = 'BOLIVIA'
+    Brasil = 'BRASIL'
+    Chile = 'CHILE'
+    Colombia = 'COLOMBIA'
+    Ecuador = 'ECUADOR'
+    Paraguay = 'PARAGUAY'
+    Peru = 'PERU'
+    Uruguay = 'URUGUAY'
+    Venezuela = 'Venezuela'
+
+    COUNTRY_CHOICES = (
+        (Argentina, 'ARGENTINA'),
+        (Bolivia, 'BOLIVIA'),
+        (Brasil, 'BRASIL'),
+        (Chile, 'CHILE'),
+        (Colombia, 'COLOMBIA'),
+        (Ecuador, 'ECUADOR'),
+        (Paraguay, 'PARAGUAY'),
+        (Peru, 'PERU'),
+        (Uruguay, 'URUGUAY'),
+        (Venezuela, 'VENEZUELA'),
+    )
+    country = models.CharField(max_length=255, choices=COUNTRY_CHOICES)
     city = models.CharField(max_length=255)
 
     def __str__(self):
